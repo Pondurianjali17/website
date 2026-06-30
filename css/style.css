@@ -37,7 +37,7 @@
     --space-16: 128px;
     
     /* Typography */
-    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-heading: 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
     
     /* Borders & Elevations */
@@ -89,6 +89,18 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-deep);
     font-weight: 700;
     line-height: 1.2;
+    margin-bottom: var(--space-2);
+}
+
+p {
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: var(--space-3);
+}
+
+.text-center p, .section-header p {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 h1 { font-size: 3.5rem; font-weight: 800; letter-spacing: -0.03em; }
@@ -117,7 +129,7 @@ a:hover {
 }
 
 .section {
-    padding: var(--space-12) 0;
+    padding: 100px 0;
     position: relative;
 }
 
@@ -183,7 +195,10 @@ a:hover {
     gap: var(--space-3);
 }
 
-.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-2 { 
+    grid-template-columns: repeat(2, 1fr); 
+    align-items: center;
+}
 .grid-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-4 { grid-template-columns: repeat(4, 1fr); }
 
@@ -193,11 +208,32 @@ a:hover {
     justify-content: center;
 }
 
-.spacer-xs { height: var(--space-1); }
-.spacer-sm { height: var(--space-2); }
-.spacer-md { height: var(--space-3); }
-.spacer-lg { height: var(--space-6); }
-.spacer-xl { height: var(--space-8); }
+/* Spacer Utilities - use margin-bottom for text elements to prevent overlapping */
+.spacer-xs { margin-bottom: var(--space-1); }
+.spacer-sm { margin-bottom: var(--space-2); }
+.spacer-md { margin-bottom: var(--space-3); }
+.spacer-lg { margin-bottom: var(--space-6); }
+.spacer-xl { margin-bottom: var(--space-8); }
+
+/* Keep height for empty spacer divs to preserve vertical gaps */
+div:empty.spacer-xs, div:empty.spacer-sm, div:empty.spacer-md, div:empty.spacer-lg, div:empty.spacer-xl {
+    margin-bottom: 0;
+    display: block;
+    width: 100%;
+}
+div:empty.spacer-xs { height: var(--space-1); }
+div:empty.spacer-sm { height: var(--space-2); }
+div:empty.spacer-md { height: var(--space-3); }
+div:empty.spacer-lg { height: var(--space-6); }
+div:empty.spacer-xl { height: var(--space-8); }
+
+/* Ensure buttons always appear below paragraphs with at least 32px spacing */
+p + .btn, 
+p + .hero-buttons, 
+p + a.btn, 
+p + button.btn {
+    margin-top: var(--space-4) !important;
+}
 
 .text-center { text-align: center; }
 .text-muted { color: var(--text-muted); }
@@ -208,14 +244,22 @@ a:hover {
    ======================================================================== */
 .reveal-on-scroll {
     opacity: 0;
-    transform: translateY(32px);
-    transition: opacity var(--transition-slow), transform var(--transition-slow);
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     will-change: opacity, transform;
 }
 
 .reveal-active {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal-on-scroll {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
 }
 
 /* ========================================================================
@@ -346,12 +390,40 @@ a:hover {
     padding: 14px 32px;
     border-radius: var(--border-radius-md);
     cursor: pointer;
-    transition: var(--transition-smooth);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     border: 2px solid transparent;
     text-align: center;
     white-space: nowrap;
     position: relative;
     overflow: hidden;
+    z-index: 1;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    transition: none;
+    z-index: 2;
+}
+
+.btn:hover::after {
+    left: 125%;
+    transition: left 0.75s ease-in-out;
+}
+
+.btn:active {
+    transform: translateY(0) scale(0.98);
 }
 
 .btn-primary {
@@ -412,7 +484,7 @@ a:hover {
     width: 14px;
     height: 14px;
     margin-left: 8px;
-    transition: transform var(--transition-fast);
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn:hover .btn-svg {

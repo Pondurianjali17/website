@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Studies & Portfolio | Aetheris Technologies</title>
+    <meta name="description" content="Read Aetheris Technologies' case studies detailing enterprise cloud migrations, custom AI solutions, security transformations, and consulting.">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ========================================================================
+       HEADER & NAVIGATION
+       ======================================================================== -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo" id="header-logo">
+                <div class="logo-icon"></div>
+                Aetheris<span>.</span>
+            </a>
+            
+            <input type="checkbox" id="mobile-menu-toggle" class="menu-toggle-input">
+            <label for="mobile-menu-toggle" class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="industries.html" class="nav-link">Industries</a></li>
+                    <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+                    <li><a href="technologies.html" class="nav-link">Technologies</a></li>
+                    <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                    <li><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-cta"><a href="contact.html" class="btn btn-primary btn-sm">Get Started <i class="fa-solid fa-arrow-right btn-icon"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========================================================================
+       SUBPAGE HERO
+       ======================================================================== -->
+    <section class="subpage-hero" id="portfolio-hero">
+        <div class="container">
+            <h1>Case Studies & Portfolio</h1>
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Portfolio</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+     PORTFOLIO WITH CSS-ONLY FILTERING
+     ======================================================================== -->
+    <section class="section" id="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Realized Impact</span>
+                <h2 class="section-title">Technical Success Stories</h2>
+                <p class="section-description">A curated selection of our global enterprise delivery records across multiple high-tech domains.</p>
+            </div>
+            
+            <!-- Hidden inputs placed BEFORE controls and grid for adjacent sibling CSS targeting -->
+            <input type="radio" name="portfolio-filter" id="filter-all" class="filter-input" checked>
+            <input type="radio" name="portfolio-filter" id="filter-cloud" class="filter-input">
+            <input type="radio" name="portfolio-filter" id="filter-ai" class="filter-input">
+            <input type="radio" name="portfolio-filter" id="filter-security" class="filter-input">
+            <input type="radio" name="portfolio-filter" id="filter-consulting" class="filter-input">
+
+            <!-- Filter Controls -->
+            <div class="portfolio-filter-controls">
+                <label for="filter-all" class="filter-label">All Case Studies</label>
+                <label for="filter-cloud" class="filter-label">Cloud Systems</label>
+                <label for="filter-ai" class="filter-label">Artificial Intelligence</label>
+                <label for="filter-security" class="filter-label">Cybersecurity</label>
+                <label for="filter-consulting" class="filter-label">Digital Consulting</label>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                
+                <!-- Project 1: Cloud -->
+                <div class="portfolio-item cat-cloud">
+                    <div class="portfolio-img flex-center">
+                        <span class="portfolio-img-overlay">Cloud Systems</span>
+                        <i class="fa-solid fa-network-wired" style="font-size: 3.5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <div class="portfolio-desc-wrapper">
+                        <h3 class="portfolio-item-title">Global Bank Core Migration</h3>
+                        <p class="portfolio-item-text">Migrated legacy retail ledger systems to high-availability multi-region AWS cloud without single service interruption.</p>
+                        <ul style="margin-bottom: var(--spacing-md); font-size: 0.8125rem; color: var(--text-muted);">
+                            <li><strong>Metrics:</strong> 40% operating cost cut, 99.999% availability index</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 2: AI -->
+                <div class="portfolio-item cat-ai">
+                    <div class="portfolio-img flex-center">
+                        <span class="portfolio-img-overlay">Artificial Intelligence</span>
+                        <i class="fa-solid fa-robot" style="font-size: 3.5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <div class="portfolio-desc-wrapper">
+                        <h3 class="portfolio-item-title">Predictive Medical Diagnostics</h3>
+                        <p class="portfolio-item-text">Custom ML pipelines training on secure clinical image archives to discover anomalies with 94% precision index.</p>
+                        <ul style="margin-bottom: var(--spacing-md); font-size: 0.8125rem; color: var(--text-muted);">
+                            <li><strong>Metrics:</strong> Response times reduced from 4 hours to 2 minutes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 3: Security -->
+                <div class="portfolio-item cat-security">
+                    <div class="portfolio-img flex-center">
+                        <span class="portfolio-img-overlay">Cybersecurity</span>
+                        <i class="fa-solid fa-user-shield" style="font-size: 3.5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <div class="portfolio-desc-wrapper">
+                        <h3 class="portfolio-item-title">Logistics Zero Trust System</h3>
+                        <p class="portfolio-item-text">Secured 15,000 endpoint delivery networks through modern identity management policies and hardware keys.</p>
+                        <ul style="margin-bottom: var(--spacing-md); font-size: 0.8125rem; color: var(--text-muted);">
+                            <li><strong>Metrics:</strong> Zero security breaches across 18 months of service</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 4: Cloud -->
+                <div class="portfolio-item cat-cloud">
+                    <div class="portfolio-img flex-center">
+                        <span class="portfolio-img-overlay">Cloud Systems</span>
+                        <i class="fa-solid fa-server" style="font-size: 3.5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <div class="portfolio-desc-wrapper">
+                        <h3 class="portfolio-item-title">Streaming Media Platform</h3>
+                        <p class="portfolio-item-text">Decoupled a monolithic video backend using containerized Go endpoints and localized edge caching CDN.</p>
+                        <ul style="margin-bottom: var(--spacing-md); font-size: 0.8125rem; color: var(--text-muted);">
+                            <li><strong>Metrics:</strong> 200ms drop in stream startup delay latency</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 5: AI -->
+                <div class="portfolio-item cat-ai">
+                    <div class="portfolio-img flex-center">
+                        <span class="portfolio-img-overlay">Artificial Intelligence</span>
+                        <i class="fa-solid fa-brain" style="font-size: 3.5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <div class="portfolio-desc-wrapper">
+                        <h3 class="portfolio-item-title">Retail Supply Forecasting</h3>
+                        <p class="portfolio-item-text">Localized predictive SCM models modeling historical order rates against local events to automate restocking patterns.</p>
+                        <ul style="margin-bottom: var(--spacing-md); font-size: 0.8125rem; color: var(--text-muted);">
+                            <li><strong>Metrics:</strong> 18% reduction in warehouse supply waste</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Project 6: Consulting -->
+                <div class="portfolio-item cat-consulting">
+                    <div class="portfolio-img flex-center">
+                        <span class="portfolio-img-overlay">Digital Consulting</span>
+                        <i class="fa-solid fa-compass" style="font-size: 3.5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <div class="portfolio-desc-wrapper">
+                        <h3 class="portfolio-item-title">Fintech Architecture Audit</h3>
+                        <p class="portfolio-item-text">A comprehensive decoupling assessment mapping transactional system latency hotspots and outlining cloud transition roadmaps.</p>
+                        <ul style="margin-bottom: var(--spacing-md); font-size: 0.8125rem; color: var(--text-muted);">
+                            <li><strong>Metrics:</strong> Saved 6 months of legacy re-platforming design error</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <a href="index.html" class="logo" id="footer-logo">
+                    <div class="logo-icon"></div>
+                    Aetheris<span>.</span>
+                </a>
+                <p>Enterprise-grade digital transformation, high-fidelity engineering, and strategic tech consulting globally.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link flex-center" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link flex-center" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-link flex-center" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Case Studies</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Enterprise</h4>
+                <ul class="footer-links">
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="technologies.html">Technologies</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Security Center</a></li>
+                    <li><a href="#">SLA Operations</a></li>
+                    <li><a href="#">Documentation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4 class="footer-title">Technical Briefing</h4>
+                <p>Subscribe to our bi-weekly architecture insights and technical reports.</p>
+                <form class="newsletter-form" action="#" method="POST">
+                    <input type="email" placeholder="Corporate email" aria-label="Corporate email" required>
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Aetheris Technologies. All rights reserved. Built using clean HTML5 & CSS3.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Trust & Safety</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

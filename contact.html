@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Aetheris Technologies</title>
+    <meta name="description" content="Get in touch with Aetheris Technologies. Schedule a technical consultation, inquire about careers, or reach our global delivery offices.">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ========================================================================
+       HEADER & NAVIGATION
+       ======================================================================== -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo" id="header-logo">
+                <div class="logo-icon"></div>
+                Aetheris<span>.</span>
+            </a>
+            
+            <input type="checkbox" id="mobile-menu-toggle" class="menu-toggle-input">
+            <label for="mobile-menu-toggle" class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="industries.html" class="nav-link">Industries</a></li>
+                    <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+                    <li><a href="technologies.html" class="nav-link">Technologies</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+                    <li class="nav-cta"><a href="contact.html" class="btn btn-primary btn-sm">Get Started <i class="fa-solid fa-arrow-right btn-icon"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========================================================================
+       SUBPAGE HERO
+       ======================================================================== -->
+    <section class="subpage-hero" id="contact-hero">
+        <div class="container">
+            <h1>Connect With Our Architects</h1>
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Contact Us</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+     CONTACT FORM & INFO PANELS
+     ======================================================================== -->
+    <section class="section" id="contact-details">
+        <div class="container">
+            
+            <div class="contact-grid">
+                
+                <!-- Information Panel -->
+                <div class="contact-info-panel">
+                    <div>
+                        <h3>Immediate Support</h3>
+                        <p class="text-muted" style="color: #DFE1E6; font-size: 0.9375rem;">Discuss workloads, scale requirements, or service availability directly.</p>
+                        
+                        <div class="contact-info-list">
+                            <div class="contact-info-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+1 (800) 555-0199 (USA Toll-Free)</span>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>architects@aetheris.corp</span>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>24/7 Monitored Ticket Desk</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: var(--spacing-lg); border-top: 1px solid rgba(255,255,255,0.1); padding-top: var(--spacing-md);">
+                        <h4 style="color: var(--white); margin-bottom: var(--spacing-sm);">Global Headquarters</h4>
+                        <p class="text-muted" style="color: #DFE1E6; font-size: 0.875rem; line-height: 1.6;">
+                            Aetheris Technologies Corp.<br>
+                            100 Financial District, Floor 32<br>
+                            Boston, MA 02110<br>
+                            United States
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Form Panel -->
+                <div class="contact-form-panel">
+                    <h3 style="margin-bottom: var(--spacing-md);">Request Architect Consultation</h3>
+                    <form action="#" method="POST" id="contact-form">
+                        
+                        <!-- Floating Label Input Group 1 -->
+                        <div class="form-group">
+                            <input type="text" id="contact-name" class="form-control" placeholder=" " required>
+                            <label for="contact-name" class="form-label">Full name</label>
+                        </div>
+
+                        <!-- Floating Label Input Group 2 -->
+                        <div class="form-group">
+                            <input type="email" id="contact-email" class="form-control" placeholder=" " required>
+                            <label for="contact-email" class="form-label">Corporate email address</label>
+                        </div>
+
+                        <!-- Floating Label Input Group 3 -->
+                        <div class="form-group">
+                            <input type="text" id="contact-org" class="form-control" placeholder=" " required>
+                            <label for="contact-org" class="form-label">Organization / Company name</label>
+                        </div>
+
+                        <!-- Floating Label Input Group 4 -->
+                        <div class="form-group">
+                            <select id="contact-interest" class="form-control" required style="padding-top: 12px; padding-bottom: 12px;">
+                                <option value="" disabled selected hidden>Core service interest</option>
+                                <option value="cloud">Cloud Migration & Kubernetes</option>
+                                <option value="ai">Cognitive AI & ML pipelines</option>
+                                <option value="security">Zero Trust Cybersecurity</option>
+                                <option value="dev">Custom Microservice Development</option>
+                                <option value="audit">Architecture Review / Consulting</option>
+                            </select>
+                        </div>
+
+                        <!-- Floating Label Input Group 5 -->
+                        <div class="form-group">
+                            <textarea id="contact-message" class="form-control" placeholder=" " required></textarea>
+                            <label for="contact-message" class="form-label">Project details or requirements</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                            Submit Request <i class="fa-solid fa-paper-plane btn-icon"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <a href="index.html" class="logo" id="footer-logo">
+                    <div class="logo-icon"></div>
+                    Aetheris<span>.</span>
+                </a>
+                <p>Enterprise-grade digital transformation, high-fidelity engineering, and strategic tech consulting globally.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link flex-center" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link flex-center" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-link flex-center" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Case Studies</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Enterprise</h4>
+                <ul class="footer-links">
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="technologies.html">Technologies</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Security Center</a></li>
+                    <li><a href="#">SLA Operations</a></li>
+                    <li><a href="#">Documentation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4 class="footer-title">Technical Briefing</h4>
+                <p>Subscribe to our bi-weekly architecture insights and technical reports.</p>
+                <form class="newsletter-form" action="#" method="POST">
+                    <input type="email" placeholder="Corporate email" aria-label="Corporate email" required>
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Aetheris Technologies. All rights reserved. Built using clean HTML5 & CSS3.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Trust & Safety</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

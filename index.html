@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aetheris Technologies | Enterprise Digital Transformation & IT Consulting</title>
+    <meta name="description" content="Aetheris Technologies delivers world-class enterprise software development, cloud computing, cybersecurity, AI solutions, and digital consulting.">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ========================================================================
+       HEADER & NAVIGATION
+       ======================================================================== -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo" id="header-logo">
+                <div class="logo-icon"></div>
+                Aetheris<span>.</span>
+            </a>
+            
+            <input type="checkbox" id="mobile-menu-toggle" class="menu-toggle-input">
+            <label for="mobile-menu-toggle" class="menu-toggle-label" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="industries.html" class="nav-link">Industries</a></li>
+                    <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+                    <li><a href="technologies.html" class="nav-link">Technologies</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li class="nav-cta"><a href="contact.html" class="btn btn-primary btn-sm">Get Started <i class="fa-solid fa-arrow-right btn-icon"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ========================================================================
+       HERO BANNER
+       ======================================================================== -->
+    <section class="hero-banner" id="home-hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="hero-tag">Enterprise Excellence</span>
+                <h1 class="hero-title">Engineering the <span>Digital Future</span></h1>
+                <p class="hero-description">We empower global enterprises to navigate digital transformation with next-generation artificial intelligence, secure cloud architectures, and future-ready IT consulting.</p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn btn-primary">Our Services <i class="fa-solid fa-arrow-right btn-icon"></i></a>
+                    <a href="contact.html" class="btn btn-white-outline">Request Consultation</a>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <div class="illustration-ring illustration-ring-1"></div>
+                <div class="illustration-ring illustration-ring-2"></div>
+                <div class="illustration-sphere"></div>
+                <div class="illustration-grid-box grid-box-1 flex-center">
+                    <i class="fa-solid fa-microchip" style="font-size: 2rem; color: var(--accent-cyan);"></i>
+                </div>
+                <div class="illustration-grid-box grid-box-2 flex-center">
+                    <i class="fa-solid fa-cloud" style="font-size: 2rem; color: var(--white);"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       STATISTICS SECTION (Positioned overlapping the hero)
+       ======================================================================== -->
+    <section class="section container" style="padding-top: 0;" id="home-stats">
+        <div class="stats-container grid grid-4">
+            <div class="stat-item">
+                <div class="stat-number">250+</div>
+                <div class="stat-title">Global Clients</div>
+                <div class="stat-desc">Fortune 500 & enterprises</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-title">Client Retention</div>
+                <div class="stat-desc">Built on trust and delivery</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-title">Years Experience</div>
+                <div class="stat-desc">Leading digital innovation</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1.2K+</div>
+                <div class="stat-title">Tech Experts</div>
+                <div class="stat-desc">Engineers and consultants</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       COMPANY INTRODUCTION
+       ======================================================================== -->
+    <section class="section" id="home-intro">
+        <div class="container grid grid-2">
+            <div>
+                <span class="section-subtitle">Who We Are</span>
+                <h2 class="section-title">A Trusted Catalyst for Enterprise Evolution</h2>
+                <p class="text-muted spacer-md" style="font-size: 1.125rem;">Aetheris Technologies designs, builds, and manages mission-critical digital systems for global organizations. We align technical sophistication with commercial agility to convert disruptions into market opportunities.</p>
+                <p class="text-muted spacer-sm">From re-platforming legacy monoliths to injecting cognitive AI into automated supply chains, our team works at the intersection of business strategy and high-fidelity engineering.</p>
+                <div class="spacer-md"></div>
+                <a href="about.html" class="btn btn-secondary">Learn More About Us <i class="fa-solid fa-arrow-right btn-icon"></i></a>
+            </div>
+            <div class="flex-center" style="position: relative; min-height: 300px;">
+                <div style="width: 100%; height: 100%; border-radius: var(--border-radius-lg); background: linear-gradient(135deg, var(--accent-blue-light) 0%, rgba(0, 82, 204, 0.05) 100%); display: flex; flex-direction: column; justify-content: center; padding: var(--spacing-lg); border: 1px solid var(--border-color);">
+                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-md);">
+                        <i class="fa-solid fa-quote-left primary-color" style="font-size: 2.5rem; opacity: 0.5;"></i>
+                    </div>
+                    <p style="font-style: italic; font-size: 1.25rem; font-weight: 500; color: var(--primary-deep); margin-bottom: var(--spacing-sm);">"Aetheris has been instrumental in upgrading our core transaction systems. Their architecture-first principles saved us months of cycle time."</p>
+                    <p style="font-size: 0.875rem; font-weight: 700; color: var(--text-dark);">Chief Technology Officer, Global Bank Corporation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       OUR SERVICES
+       ======================================================================== -->
+    <section class="section section-bg-light" id="home-services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">What We Excel At</span>
+                <h2 class="section-title">Core Capability Stack</h2>
+                <p class="section-description">Scalable enterprise-grade engineering designed to drive sustainable competitive advantage.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon-wrapper flex-center">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="card-title">Cognitive AI & ML</h3>
+                    <p class="card-text">Embed intelligence into operational layers, predictive modeling, machine learning pipelines, and custom large language models.</p>
+                    <a href="services.html" class="card-link">Explore AI <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="card">
+                    <div class="card-icon-wrapper flex-center">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+                    <h3 class="card-title">Cloud Infrastructure</h3>
+                    <p class="card-text">Design and deploy resilient, multi-cloud architectures (AWS, Azure, GCP) with integrated infrastructure as code and automated orchestration.</p>
+                    <a href="services.html" class="card-link">Explore Cloud <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="card">
+                    <div class="card-icon-wrapper flex-center">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="card-title">Cybersecurity Systems</h3>
+                    <p class="card-text">Continuous security engineering, Zero Trust integration, penetration testing, compliance mapping, and proactive threat modeling.</p>
+                    <a href="services.html" class="card-link">Explore Security <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="text-center spacer-lg">
+                <a href="services.html" class="btn btn-secondary">View All Services <i class="fa-solid fa-cube btn-icon"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       INDUSTRIES WE SERVE
+       ======================================================================== -->
+    <section class="section" id="home-industries">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Vertical Expertise</span>
+                <h2 class="section-title">Tailored Sector Impact</h2>
+                <p class="section-description">We combine domain depth with technology scale to address segment-specific pain points.</p>
+            </div>
+            <div class="grid grid-4">
+                <div class="card text-center hover-accent-line" style="padding: var(--spacing-md);">
+                    <div style="font-size: 2rem; color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h4>Financial Services</h4>
+                    <p class="text-muted spacer-sm" style="font-size: 0.875rem;">Next-gen retail banking platforms, secure payment infrastructure, and AI fraud systems.</p>
+                </div>
+                <div class="card text-center hover-accent-line" style="padding: var(--spacing-md);">
+                    <div style="font-size: 2rem; color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+                    <h4>Healthcare</h4>
+                    <p class="text-muted spacer-sm" style="font-size: 0.875rem;">HIPAA-compliant software, predictive diagnostics platforms, and electronic record migration.</p>
+                </div>
+                <div class="card text-center hover-accent-line" style="padding: var(--spacing-md);">
+                    <div style="font-size: 2rem; color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <h4>Retail & Commerce</h4>
+                    <p class="text-muted spacer-sm" style="font-size: 0.875rem;">Headless e-commerce models, localized recommendation engines, and logistics optimization.</p>
+                </div>
+                <div class="card text-center hover-accent-line" style="padding: var(--spacing-md);">
+                    <div style="font-size: 2rem; color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h4>Manufacturing</h4>
+                    <p class="text-muted spacer-sm" style="font-size: 0.875rem;">IoT telemetry monitoring, machine health prognostics, and end-to-end supply orchestration.</p>
+                </div>
+            </div>
+            <div class="text-center spacer-lg">
+                <a href="industries.html" class="btn btn-secondary">Explore Industries <i class="fa-solid fa-globe btn-icon"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       WHY CHOOSE US
+       ======================================================================== -->
+    <section class="section section-bg-light" id="home-why-choose-us">
+        <div class="container grid grid-2" style="align-items: center;">
+            <div>
+                <span class="section-subtitle">Our Advantage</span>
+                <h2 class="section-title">Built for Precision, Engineered for Growth</h2>
+                <p class="text-muted spacer-sm">We differentiate ourselves by combining deep-tech capabilities with an absolute commitment to service availability and predictable delivery cycles.</p>
+                <div class="spacer-md"></div>
+                
+                <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-md);">
+                    <div class="flex-center" style="width: 48px; height: 48px; border-radius: 50%; background-color: var(--accent-blue-light); color: var(--primary-blue); font-size: 1.25rem; flex-shrink: 0;">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div>
+                        <h4>Outcome-Based Delivery</h4>
+                        <p class="text-muted" style="font-size: 0.9375rem;">No ambiguous scope definitions. We align project objectives with clear key-performance results.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-md);">
+                    <div class="flex-center" style="width: 48px; height: 48px; border-radius: 50%; background-color: var(--accent-blue-light); color: var(--primary-blue); font-size: 1.25rem; flex-shrink: 0;">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div>
+                        <h4>Clean Architecture Focus</h4>
+                        <p class="text-muted" style="font-size: 0.9375rem;">We prioritize decoupled design, type safety, and test automation to prevent downstream technical debt.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: var(--spacing-sm);">
+                    <div class="flex-center" style="width: 48px; height: 48px; border-radius: 50%; background-color: var(--accent-blue-light); color: var(--primary-blue); font-size: 1.25rem; flex-shrink: 0;">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div>
+                        <h4>24/7 Managed Operations</h4>
+                        <p class="text-muted" style="font-size: 0.9375rem;">Global networks of Site Reliability Engineers ensuring consistent uptime and fast incident resolution.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-center" style="position: relative; min-height: 400px;">
+                <div style="background-color: var(--primary-deep); border-radius: var(--border-radius-lg); padding: var(--spacing-lg); color: var(--white); width: 100%; border: 1px solid rgba(255,255,255,0.1);">
+                    <h3 style="color: var(--white); margin-bottom: var(--spacing-sm);">Aetheris Code of Value</h3>
+                    <p class="text-muted spacer-sm" style="font-size: 0.9375rem; color: #DFE1E6;">We govern our partnerships with transparency and rigor.</p>
+                    <ul style="display: flex; flex-direction: column; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
+                        <li style="display: flex; align-items: center; gap: var(--spacing-sm); font-size: 0.9375rem;"><i class="fa-solid fa-check-circle" style="color: var(--accent-cyan);"></i> Zero technical debt tolerance</li>
+                        <li style="display: flex; align-items: center; gap: var(--spacing-sm); font-size: 0.9375rem;"><i class="fa-solid fa-check-circle" style="color: var(--accent-cyan);"></i> Cloud agnostic architecture principles</li>
+                        <li style="display: flex; align-items: center; gap: var(--spacing-sm); font-size: 0.9375rem;"><i class="fa-solid fa-check-circle" style="color: var(--accent-cyan);"></i> Multi-layered security embedded inherently</li>
+                        <li style="display: flex; align-items: center; gap: var(--spacing-sm); font-size: 0.9375rem;"><i class="fa-solid fa-check-circle" style="color: var(--accent-cyan);"></i> Open, documented standard protocols</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       PROCESS TIMELINE
+       ======================================================================== -->
+    <section class="section" id="home-timeline">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">How We Work</span>
+                <h2 class="section-title">Enterprise Engagement Cycle</h2>
+                <p class="section-description">Our standard framework guarantees reliable project onboarding through to full production deployment.</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <span class="timeline-step">Step 01</span>
+                        <h3>Discovery & Assessment</h3>
+                        <p class="text-muted spacer-xs">We detail your existing topology, locate bottlenecks, and establish performance benchmarks.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                        <span class="timeline-step">Step 02</span>
+                        <h3>Architecture Modeling</h3>
+                        <p class="text-muted spacer-xs">Blueprint formulation detailing target service layers, cloud routing, API schema, and security protocols.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-left">
+                    <div class="timeline-content">
+                        <span class="timeline-step">Step 03</span>
+                        <h3>Iterative Agile Delivery</h3>
+                        <p class="text-muted spacer-xs">High-fidelity engineering using structured sprints, unit-test coverage, and daily integration builds.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-right">
+                    <div class="timeline-content">
+                        <span class="timeline-step">Step 04</span>
+                        <h3>Secure Deploy & Transfer</h3>
+                        <p class="text-muted spacer-xs">Automated zero-downtime deployment pipelines completed with documentation and site reliability handoff.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       FEATURED PROJECTS
+       ======================================================================== -->
+    <section class="section section-bg-light" id="home-featured-projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Proven Case Studies</span>
+                <h2 class="section-title">Digital Transformation In Action</h2>
+                <p class="section-description">Real-world results delivered to leading companies across domains.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="portfolio-item">
+                    <div class="portfolio-img flex-center">
+                        <span class="portfolio-img-overlay">Cloud Architecture</span>
+                        <i class="fa-solid fa-network-wired" style="font-size: 3.5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <div class="portfolio-desc-wrapper">
+                        <h3 class="portfolio-item-title">Global Bank Core Migration</h3>
+                        <p class="portfolio-item-text">Migrated legacy retail ledger systems to high-availability multi-region AWS cloud without single service interruption.</p>
+                        <a href="portfolio.html" class="card-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img flex-center">
+                        <span class="portfolio-img-overlay">Artificial Intelligence</span>
+                        <i class="fa-solid fa-robot" style="font-size: 3.5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <div class="portfolio-desc-wrapper">
+                        <h3 class="portfolio-item-title">Predictive Medical Diagnostics</h3>
+                        <p class="portfolio-item-text">Custom ML pipelines training on secure clinical image archives to discover anomalies with 94% precision index.</p>
+                        <a href="portfolio.html" class="card-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-img flex-center">
+                        <span class="portfolio-img-overlay">Cybersecurity</span>
+                        <i class="fa-solid fa-user-shield" style="font-size: 3.5rem; color: var(--primary-blue);"></i>
+                    </div>
+                    <div class="portfolio-desc-wrapper">
+                        <h3 class="portfolio-item-title">Logistics Zero Trust System</h3>
+                        <p class="portfolio-item-text">Secured 15,000 endpoint delivery networks through modern identity management policies and hardware keys.</p>
+                        <a href="portfolio.html" class="card-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center spacer-lg">
+                <a href="portfolio.html" class="btn btn-secondary">Explore All Case Studies <i class="fa-solid fa-folder-open btn-icon"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       CLIENT TESTIMONIALS
+       ======================================================================== -->
+    <section class="section" id="home-testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Client Endorsements</span>
+                <h2 class="section-title">Partner Perspectives</h2>
+                <p class="section-description">Hear directly from leaders who rely on Aetheris for mission-critical systems.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div style="font-size: 1.5rem; color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <p class="card-text" style="font-style: italic;">"Aetheris did not just write code; they sat with our architects to redefine how our service discovery logic operates. The results exceeded targets."</p>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
+                        <div class="flex-center" style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-blue); color: var(--white); font-weight: 700; font-size: 0.875rem;">MS</div>
+                        <div>
+                            <h4 style="font-size: 0.9375rem;">Marcus Vance</h4>
+                            <p class="text-muted" style="font-size: 0.75rem;">VP Architecture, FinPay Corp</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="font-size: 1.5rem; color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <p class="card-text" style="font-style: italic;">"The cybersecurity assessment was exceptionally detailed. They uncovered logic vectors that three previous compliance audits had completely missed."</p>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
+                        <div class="flex-center" style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-blue); color: var(--white); font-weight: 700; font-size: 0.875rem;">EL</div>
+                        <div>
+                            <h4 style="font-size: 0.9375rem;">Evelyn Lin</h4>
+                            <p class="text-muted" style="font-size: 0.75rem;">Chief Security Officer, BioHealth Group</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div style="font-size: 1.5rem; color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <p class="card-text" style="font-style: italic;">"Their SRE team manages our container clusters with absolute precision. Our service availability has remained at a flawless five-nines."</p>
+                    <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
+                        <div class="flex-center" style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-blue); color: var(--white); font-weight: 700; font-size: 0.875rem;">DK</div>
+                        <div>
+                            <h4 style="font-size: 0.9375rem;">David Kross</h4>
+                            <p class="text-muted" style="font-size: 0.75rem;">Director SRE, Logistics Prime</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       TECHNOLOGIES GRID
+       ======================================================================== -->
+    <section class="section section-bg-light" id="home-technologies">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Ecosystem</span>
+                <h2 class="section-title">Modern Stacks & Platforms</h2>
+                <p class="section-description">We build on certified frameworks and open-source standards to maintain operational resilience.</p>
+            </div>
+            
+            <div class="grid grid-4 text-center">
+                <div style="background-color: var(--white); padding: var(--spacing-md); border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                    <i class="fa-brands fa-aws" style="font-size: 3rem; color: var(--primary-deep); margin-bottom: var(--spacing-xs);"></i>
+                    <h4>AWS</h4>
+                </div>
+                <div style="background-color: var(--white); padding: var(--spacing-md); border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                    <i class="fa-brands fa-microsoft" style="font-size: 3rem; color: var(--primary-deep); margin-bottom: var(--spacing-xs);"></i>
+                    <h4>Microsoft Azure</h4>
+                </div>
+                <div style="background-color: var(--white); padding: var(--spacing-md); border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                    <i class="fa-brands fa-google" style="font-size: 3rem; color: var(--primary-deep); margin-bottom: var(--spacing-xs);"></i>
+                    <h4>Google Cloud</h4>
+                </div>
+                <div style="background-color: var(--white); padding: var(--spacing-md); border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+                    <i class="fa-brands fa-docker" style="font-size: 3rem; color: var(--primary-deep); margin-bottom: var(--spacing-xs);"></i>
+                    <h4>Docker & K8s</h4>
+                </div>
+            </div>
+            <div class="text-center spacer-lg">
+                <a href="technologies.html" class="btn btn-secondary">Explore Technology Stack <i class="fa-solid fa-code btn-icon"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       FAQ ACCORDION
+       ======================================================================== -->
+    <section class="section" id="home-faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">FAQ</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-description">Common insights regarding enterprise delivery pipelines and SLA frameworks.</p>
+            </div>
+            
+            <div class="faq-accordion">
+                <details class="faq-item">
+                    <summary>What SLA metrics govern your SRE operations? <i class="fa-solid fa-chevron-down"></i></summary>
+                    <div class="faq-content">
+                        <p>Our Tier 1 managed systems are governed by a 99.99% (four-nines) availability agreement. High-priority (P1) incidents receive a 15-minute response SLA, monitored continuously by our distributed operations centers.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Do you support hybrid-cloud deployment topologies? <i class="fa-solid fa-chevron-down"></i></summary>
+                    <div class="faq-content">
+                        <p>Yes. We regularly design and manage hybrid systems that interface legacy private infrastructure with hyperscalers. We use container isolation (Kubernetes) and secure endpoints to keep traffic encrypted transit-wide.</p>
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>How do you approach legacy system modernizations? <i class="fa-solid fa-chevron-down"></i></summary>
+                    <div class="faq-content">
+                        <p>We deploy the Strangler Fig pattern to extract services incrementally. This mitigates operational risks, allowing components to modernize while maintaining absolute operational parity between the old and new clusters.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       CONTACT CALL-TO-ACTION
+       ======================================================================== -->
+    <section class="section section-bg-dark" id="home-cta">
+        <div class="container text-center" style="max-width: 800px;">
+            <span class="section-subtitle" style="color: var(--accent-cyan);">Ready to Transform?</span>
+            <h2 class="section-title" style="color: var(--white); font-size: 2.75rem;">Let's Architect Your Next Breakthrough</h2>
+            <p class="text-muted spacer-md" style="color: #DFE1E6; font-size: 1.125rem;">Discuss your objectives with our senior consulting partners. We'll map out a high-level timeline and execution roadmap.</p>
+            <div class="spacer-md"></div>
+            <div class="flex-center" style="gap: var(--spacing-sm); flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-light">Schedule Discovery Call <i class="fa-solid fa-calendar-check btn-icon"></i></a>
+                <a href="contact.html" class="btn btn-white-outline">Write to Our Architects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <a href="index.html" class="logo" id="footer-logo">
+                    <div class="logo-icon"></div>
+                    Aetheris<span>.</span>
+                </a>
+                <p>Enterprise-grade digital transformation, high-fidelity engineering, and strategic tech consulting globally.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link flex-center" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link flex-center" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-link flex-center" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Case Studies</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Enterprise</h4>
+                <ul class="footer-links">
+                    <li><a href="industries.html">Industries</a></li>
+                    <li><a href="solutions.html">Solutions</a></li>
+                    <li><a href="technologies.html">Technologies</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-title">Support</h4>
+                <ul class="footer-links">
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#">Security Center</a></li>
+                    <li><a href="#">SLA Operations</a></li>
+                    <li><a href="#">Documentation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <h4 class="footer-title">Technical Briefing</h4>
+                <p>Subscribe to our bi-weekly architecture insights and technical reports.</p>
+                <form class="newsletter-form" action="#" method="POST">
+                    <input type="email" placeholder="Corporate email" aria-label="Corporate email" required>
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Aetheris Technologies. All rights reserved. Built using clean HTML5 & CSS3.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Trust & Safety</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

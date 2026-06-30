@@ -5,20 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aetheris Technologies | Enterprise Digital Transformation & IT Consulting</title>
     <meta name="description" content="Aetheris Technologies delivers world-class enterprise software development, cloud computing, cybersecurity, AI solutions, and digital consulting.">
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Main Stylesheet -->
+    <!-- Google Fonts -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <!-- ========================================================================
-       HEADER & NAVIGATION
+       1. NAVIGATION HEADER
        ======================================================================== -->
     <header class="site-header">
         <div class="container header-container">
             <a href="index.html" class="logo" id="header-logo">
-                <div class="logo-icon"></div>
+                <!-- Custom Inline SVG Logo -->
+                <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#logo-grad)" />
+                    <circle cx="16" cy="16" r="6" fill="white" />
+                    <circle cx="16" cy="16" r="3" fill="#0052CC" />
+                    <defs>
+                        <linearGradient id="logo-grad" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#0052CC" />
+                            <stop offset="100%" stop-color="#00B4D8" />
+                        </linearGradient>
+                    </defs>
+                </svg>
                 Aetheris<span>.</span>
             </a>
             
@@ -40,62 +49,71 @@
                     <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
                     <li><a href="careers.html" class="nav-link">Careers</a></li>
                     <li><a href="contact.html" class="nav-link">Contact Us</a></li>
-                    <li class="nav-cta"><a href="contact.html" class="btn btn-primary btn-sm">Get Started <i class="fa-solid fa-arrow-right btn-icon"></i></a></li>
+                    <li class="nav-cta">
+                        <a href="contact.html" class="btn btn-primary btn-sm">
+                            Get Started 
+                            <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- ========================================================================
-       HERO BANNER
+       2. HERO BANNER WITH CANVAS PARTICLES
        ======================================================================== -->
     <section class="hero-banner" id="home-hero">
+        <canvas id="hero-canvas"></canvas>
         <div class="container hero-grid">
             <div class="hero-content">
-                <span class="hero-tag">Enterprise Excellence</span>
+                <span class="hero-tag">Fortune 500 Enterprise Consulting</span>
                 <h1 class="hero-title">Engineering the <span>Digital Future</span></h1>
-                <p class="hero-description">We empower global enterprises to navigate digital transformation with next-generation artificial intelligence, secure cloud architectures, and future-ready IT consulting.</p>
+                <p class="hero-description">We empower global enterprises to navigate digital disruption with resilient cloud architectures, secure systems, and next-generation cognitive computing.</p>
                 <div class="hero-buttons">
-                    <a href="services.html" class="btn btn-primary">Our Services <i class="fa-solid fa-arrow-right btn-icon"></i></a>
-                    <a href="contact.html" class="btn btn-white-outline">Request Consultation</a>
+                    <a href="services.html" class="btn btn-primary">
+                        Our Services
+                        <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
+                    <a href="contact.html" class="btn btn-outline-white">Request Consultation</a>
                 </div>
             </div>
             <div class="hero-illustration">
                 <div class="illustration-ring illustration-ring-1"></div>
                 <div class="illustration-ring illustration-ring-2"></div>
                 <div class="illustration-sphere"></div>
-                <div class="illustration-grid-box grid-box-1 flex-center">
-                    <i class="fa-solid fa-microchip" style="font-size: 2rem; color: var(--accent-cyan);"></i>
+                <div class="illustration-icon-box icon-box-1 flex-center">
+                    <svg style="width:36px; height:36px; color:var(--accent-cyan);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
                 </div>
-                <div class="illustration-grid-box grid-box-2 flex-center">
-                    <i class="fa-solid fa-cloud" style="font-size: 2rem; color: var(--white);"></i>
+                <div class="illustration-icon-box icon-box-2 flex-center">
+                    <svg style="width:36px; height:36px; color:var(--white);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ========================================================================
-       STATISTICS SECTION (Positioned overlapping the hero)
+       3. ANIMATED STATISTICS
        ======================================================================== -->
     <section class="section container" style="padding-top: 0;" id="home-stats">
         <div class="stats-container grid grid-4">
             <div class="stat-item">
-                <div class="stat-number">250+</div>
+                <div class="stat-number stat-counter" data-target="250" data-suffix="+">0+</div>
                 <div class="stat-title">Global Clients</div>
                 <div class="stat-desc">Fortune 500 & enterprises</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">98%</div>
+                <div class="stat-number stat-counter" data-target="98" data-suffix="%">0%</div>
                 <div class="stat-title">Client Retention</div>
                 <div class="stat-desc">Built on trust and delivery</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">15+</div>
+                <div class="stat-number stat-counter" data-target="15" data-suffix="+">0+</div>
                 <div class="stat-title">Years Experience</div>
                 <div class="stat-desc">Leading digital innovation</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">1.2K+</div>
+                <div class="stat-number stat-counter" data-target="1200" data-suffix="+">0+</div>
                 <div class="stat-title">Tech Experts</div>
                 <div class="stat-desc">Engineers and consultants</div>
             </div>
@@ -103,122 +121,137 @@
     </section>
 
     <!-- ========================================================================
-       COMPANY INTRODUCTION
+       4. COMPANY INTRODUCTION
        ======================================================================== -->
-    <section class="section" id="home-intro">
-        <div class="container grid grid-2">
+    <section class="section reveal-on-scroll" id="home-intro">
+        <div class="container grid grid-2" style="align-items: center;">
             <div>
                 <span class="section-subtitle">Who We Are</span>
                 <h2 class="section-title">A Trusted Catalyst for Enterprise Evolution</h2>
-                <p class="text-muted spacer-md" style="font-size: 1.125rem;">Aetheris Technologies designs, builds, and manages mission-critical digital systems for global organizations. We align technical sophistication with commercial agility to convert disruptions into market opportunities.</p>
-                <p class="text-muted spacer-sm">From re-platforming legacy monoliths to injecting cognitive AI into automated supply chains, our team works at the intersection of business strategy and high-fidelity engineering.</p>
+                <p class="text-muted spacer-md" style="font-size: 1.125rem;">Aetheris Technologies designs, constructs, and manages critical digital systems for global organizations. We align technical sophistication with commercial agility to convert disruptions into market opportunities.</p>
+                <p class="text-muted spacer-sm">From re-platforming legacy databases to deploying fine-tuned ML models into supply chains, our team works at the intersection of enterprise business strategy and high-fidelity systems engineering.</p>
                 <div class="spacer-md"></div>
-                <a href="about.html" class="btn btn-secondary">Learn More About Us <i class="fa-solid fa-arrow-right btn-icon"></i></a>
+                <a href="about.html" class="btn btn-secondary">
+                    About Aetheris
+                    <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
             </div>
-            <div class="flex-center" style="position: relative; min-height: 300px;">
-                <div style="width: 100%; height: 100%; border-radius: var(--border-radius-lg); background: linear-gradient(135deg, var(--accent-blue-light) 0%, rgba(0, 82, 204, 0.05) 100%); display: flex; flex-direction: column; justify-content: center; padding: var(--spacing-lg); border: 1px solid var(--border-color);">
-                    <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-md);">
-                        <i class="fa-solid fa-quote-left primary-color" style="font-size: 2.5rem; opacity: 0.5;"></i>
-                    </div>
-                    <p style="font-style: italic; font-size: 1.25rem; font-weight: 500; color: var(--primary-deep); margin-bottom: var(--spacing-sm);">"Aetheris has been instrumental in upgrading our core transaction systems. Their architecture-first principles saved us months of cycle time."</p>
-                    <p style="font-size: 0.875rem; font-weight: 700; color: var(--text-dark);">Chief Technology Officer, Global Bank Corporation</p>
+            <div class="flex-center" style="position: relative; min-height: 320px;">
+                <div class="card glass hover-glow" style="width: 100%; border: 1px solid var(--border-color); background-color: var(--accent-light);">
+                    <svg style="width: 32px; height: 32px; color: var(--primary-blue); margin-bottom: var(--space-2);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3-3 7-3 10 0M14 21c2-2 5-2 7 0M12 3v10M12 13h10M12 13H2"></path></svg>
+                    <p style="font-style: italic; font-size: 1.25rem; font-weight: 500; color: var(--primary-deep); margin-bottom: var(--space-2);">"Aetheris has been instrumental in upgrading our core transaction systems. Their architecture-first principles saved us months of cycle time."</p>
+                    <h4 style="font-size: 0.875rem; color: var(--text-dark);">Chief Technology Officer, Global Bank Corporation</h4>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ========================================================================
-       OUR SERVICES
+       5. SERVICES PREVIEW WITH MODERN CUSTOM SVG ICONS
        ======================================================================== -->
-    <section class="section section-bg-light" id="home-services">
+    <section class="section section-bg-light reveal-on-scroll" id="home-services">
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle">What We Excel At</span>
                 <h2 class="section-title">Core Capability Stack</h2>
                 <p class="section-description">Scalable enterprise-grade engineering designed to drive sustainable competitive advantage.</p>
             </div>
+            
             <div class="grid grid-3">
-                <div class="card">
+                <!-- Card 1 -->
+                <div class="card hover-glow">
                     <div class="card-icon-wrapper flex-center">
-                        <i class="fa-solid fa-brain"></i>
+                        <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                     </div>
                     <h3 class="card-title">Cognitive AI & ML</h3>
                     <p class="card-text">Embed intelligence into operational layers, predictive modeling, machine learning pipelines, and custom large language models.</p>
-                    <a href="services.html" class="card-link">Explore AI <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="services.html" class="card-link">
+                        Explore AI 
+                        <svg class="card-link-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
                 </div>
-                <div class="card">
+                <!-- Card 2 -->
+                <div class="card hover-glow">
                     <div class="card-icon-wrapper flex-center">
-                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path><line x1="12" y1="11" x2="12" y2="17"></line><line x1="9" y1="14" x2="15" y2="14"></line></svg>
                     </div>
                     <h3 class="card-title">Cloud Infrastructure</h3>
                     <p class="card-text">Design and deploy resilient, multi-cloud architectures (AWS, Azure, GCP) with integrated infrastructure as code and automated orchestration.</p>
-                    <a href="services.html" class="card-link">Explore Cloud <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="services.html" class="card-link">
+                        Explore Cloud 
+                        <svg class="card-link-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
                 </div>
-                <div class="card">
+                <!-- Card 3 -->
+                <div class="card hover-glow">
                     <div class="card-icon-wrapper flex-center">
-                        <i class="fa-solid fa-shield-halved"></i>
+                        <svg class="card-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                     </div>
                     <h3 class="card-title">Cybersecurity Systems</h3>
                     <p class="card-text">Continuous security engineering, Zero Trust integration, penetration testing, compliance mapping, and proactive threat modeling.</p>
-                    <a href="services.html" class="card-link">Explore Security <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="services.html" class="card-link">
+                        Explore Security 
+                        <svg class="card-link-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
                 </div>
             </div>
+            
             <div class="text-center spacer-lg">
-                <a href="services.html" class="btn btn-secondary">View All Services <i class="fa-solid fa-cube btn-icon"></i></a>
+                <a href="services.html" class="btn btn-secondary">
+                    View All Capabilities
+                    <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- ========================================================================
-       INDUSTRIES WE SERVE
+       6. INDUSTRIES WE SERVE
        ======================================================================== -->
-    <section class="section" id="home-industries">
+    <section class="section reveal-on-scroll" id="home-industries">
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle">Vertical Expertise</span>
-                <h2 class="section-title">Tailored Sector Impact</h2>
-                <p class="section-description">We combine domain depth with technology scale to address segment-specific pain points.</p>
+                <h2 class="section-title">Sector Specific Value</h2>
+                <p class="section-description">We combine domain depth with technology scale to address industry-specific regulations and scale requirements.</p>
             </div>
+            
             <div class="grid grid-4">
-                <div class="card text-center hover-accent-line" style="padding: var(--spacing-md);">
-                    <div style="font-size: 2rem; color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
-                        <i class="fa-solid fa-building-columns"></i>
-                    </div>
+                <div class="card text-center hover-glow" style="padding: var(--space-3);">
+                    <svg style="width: 48px; height: 48px; color: var(--primary-blue); margin: 0 auto var(--space-2) auto;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 10h18M5 6h14M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"></path></svg>
                     <h4>Financial Services</h4>
-                    <p class="text-muted spacer-sm" style="font-size: 0.875rem;">Next-gen retail banking platforms, secure payment infrastructure, and AI fraud systems.</p>
+                    <p class="text-muted spacer-sm" style="font-size: 0.875rem;">Next-gen retail banking platforms, secure payment architectures, and AI fraud discovery.</p>
                 </div>
-                <div class="card text-center hover-accent-line" style="padding: var(--spacing-md);">
-                    <div style="font-size: 2rem; color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
-                        <i class="fa-solid fa-heart-pulse"></i>
-                    </div>
+                <div class="card text-center hover-glow" style="padding: var(--space-3);">
+                    <svg style="width: 48px; height: 48px; color: var(--primary-blue); margin: 0 auto var(--space-2) auto;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
                     <h4>Healthcare</h4>
-                    <p class="text-muted spacer-sm" style="font-size: 0.875rem;">HIPAA-compliant software, predictive diagnostics platforms, and electronic record migration.</p>
+                    <p class="text-muted spacer-sm" style="font-size: 0.875rem;">HIPAA-compliant platforms, telemetry analysis engines, and clinical pipeline scaling.</p>
                 </div>
-                <div class="card text-center hover-accent-line" style="padding: var(--spacing-md);">
-                    <div style="font-size: 2rem; color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </div>
+                <div class="card text-center hover-glow" style="padding: var(--space-3);">
+                    <svg style="width: 48px; height: 48px; color: var(--primary-blue); margin: 0 auto var(--space-2) auto;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                     <h4>Retail & Commerce</h4>
-                    <p class="text-muted spacer-sm" style="font-size: 0.875rem;">Headless e-commerce models, localized recommendation engines, and logistics optimization.</p>
+                    <p class="text-muted spacer-sm" style="font-size: 0.875rem;">Headless composition architectures, localized predictions, and inventory models.</p>
                 </div>
-                <div class="card text-center hover-accent-line" style="padding: var(--spacing-md);">
-                    <div style="font-size: 2rem; color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
-                        <i class="fa-solid fa-industry"></i>
-                    </div>
+                <div class="card text-center hover-glow" style="padding: var(--space-3);">
+                    <svg style="width: 48px; height: 48px; color: var(--primary-blue); margin: 0 auto var(--space-2) auto;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 21H2V3h10v18M12 10h10M12 15h10M6 8h2M6 13h2M6 18h2"></path></svg>
                     <h4>Manufacturing</h4>
-                    <p class="text-muted spacer-sm" style="font-size: 0.875rem;">IoT telemetry monitoring, machine health prognostics, and end-to-end supply orchestration.</p>
+                    <p class="text-muted spacer-sm" style="font-size: 0.875rem;">IoT sensor telemetries, predictive engine degradation, and automated restock logs.</p>
                 </div>
             </div>
+            
             <div class="text-center spacer-lg">
-                <a href="industries.html" class="btn btn-secondary">Explore Industries <i class="fa-solid fa-globe btn-icon"></i></a>
+                <a href="industries.html" class="btn btn-secondary">
+                    Explore Industries
+                    <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- ========================================================================
-       WHY CHOOSE US
+       7. WHY CHOOSE US
        ======================================================================== -->
-    <section class="section section-bg-light" id="home-why-choose-us">
+    <section class="section section-bg-light reveal-on-scroll" id="home-why-choose-us">
         <div class="container grid grid-2" style="align-items: center;">
             <div>
                 <span class="section-subtitle">Our Advantage</span>
@@ -226,9 +259,9 @@
                 <p class="text-muted spacer-sm">We differentiate ourselves by combining deep-tech capabilities with an absolute commitment to service availability and predictable delivery cycles.</p>
                 <div class="spacer-md"></div>
                 
-                <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-md);">
-                    <div class="flex-center" style="width: 48px; height: 48px; border-radius: 50%; background-color: var(--accent-blue-light); color: var(--primary-blue); font-size: 1.25rem; flex-shrink: 0;">
-                        <i class="fa-solid fa-award"></i>
+                <div style="display: flex; gap: var(--space-2); margin-bottom: var(--space-3);">
+                    <div class="flex-center" style="width: 48px; height: 48px; border-radius: 50%; background-color: var(--accent-blue-light); color: var(--primary-blue); flex-shrink: 0;">
+                        <svg style="width:24px; height:24px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                     </div>
                     <div>
                         <h4>Outcome-Based Delivery</h4>
@@ -236,9 +269,9 @@
                     </div>
                 </div>
 
-                <div style="display: flex; gap: var(--spacing-sm); margin-bottom: var(--spacing-md);">
-                    <div class="flex-center" style="width: 48px; height: 48px; border-radius: 50%; background-color: var(--accent-blue-light); color: var(--primary-blue); font-size: 1.25rem; flex-shrink: 0;">
-                        <i class="fa-solid fa-code"></i>
+                <div style="display: flex; gap: var(--space-2); margin-bottom: var(--space-3);">
+                    <div class="flex-center" style="width: 48px; height: 48px; border-radius: 50%; background-color: var(--accent-blue-light); color: var(--primary-blue); flex-shrink: 0;">
+                        <svg style="width:24px; height:24px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                     </div>
                     <div>
                         <h4>Clean Architecture Focus</h4>
@@ -246,9 +279,9 @@
                     </div>
                 </div>
 
-                <div style="display: flex; gap: var(--spacing-sm);">
-                    <div class="flex-center" style="width: 48px; height: 48px; border-radius: 50%; background-color: var(--accent-blue-light); color: var(--primary-blue); font-size: 1.25rem; flex-shrink: 0;">
-                        <i class="fa-solid fa-headset"></i>
+                <div style="display: flex; gap: var(--space-2);">
+                    <div class="flex-center" style="width: 48px; height: 48px; border-radius: 50%; background-color: var(--accent-blue-light); color: var(--primary-blue); flex-shrink: 0;">
+                        <svg style="width:24px; height:24px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                     </div>
                     <div>
                         <h4>24/7 Managed Operations</h4>
@@ -257,15 +290,23 @@
                 </div>
             </div>
             
-            <div class="flex-center" style="position: relative; min-height: 400px;">
-                <div style="background-color: var(--primary-deep); border-radius: var(--border-radius-lg); padding: var(--spacing-lg); color: var(--white); width: 100%; border: 1px solid rgba(255,255,255,0.1);">
-                    <h3 style="color: var(--white); margin-bottom: var(--spacing-sm);">Aetheris Code of Value</h3>
-                    <p class="text-muted spacer-sm" style="font-size: 0.9375rem; color: #DFE1E6;">We govern our partnerships with transparency and rigor.</p>
-                    <ul style="display: flex; flex-direction: column; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
-                        <li style="display: flex; align-items: center; gap: var(--spacing-sm); font-size: 0.9375rem;"><i class="fa-solid fa-check-circle" style="color: var(--accent-cyan);"></i> Zero technical debt tolerance</li>
-                        <li style="display: flex; align-items: center; gap: var(--spacing-sm); font-size: 0.9375rem;"><i class="fa-solid fa-check-circle" style="color: var(--accent-cyan);"></i> Cloud agnostic architecture principles</li>
-                        <li style="display: flex; align-items: center; gap: var(--spacing-sm); font-size: 0.9375rem;"><i class="fa-solid fa-check-circle" style="color: var(--accent-cyan);"></i> Multi-layered security embedded inherently</li>
-                        <li style="display: flex; align-items: center; gap: var(--spacing-sm); font-size: 0.9375rem;"><i class="fa-solid fa-check-circle" style="color: var(--accent-cyan);"></i> Open, documented standard protocols</li>
+            <div class="flex-center" style="position: relative; min-height: 380px;">
+                <div class="card section-bg-dark hover-glow" style="width: 100%; border: 1px solid rgba(255,255,255,0.05);">
+                    <h3 style="color: var(--white); margin-bottom: var(--space-2);">Aetheris Code of Value</h3>
+                    <p class="text-muted spacer-sm" style="color: #94A3B8; font-size: 0.9375rem;">We govern our partnerships with transparency and rigor.</p>
+                    <ul style="display: flex; flex-direction: column; gap: var(--space-2); margin-top: var(--space-3);">
+                        <li style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.9375rem; color: #E2E8F0;">
+                            <svg style="width: 18px; height: 18px; color: var(--accent-cyan);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Zero technical debt tolerance
+                        </li>
+                        <li style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.9375rem; color: #E2E8F0;">
+                            <svg style="width: 18px; height: 18px; color: var(--accent-cyan);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Cloud agnostic architectures
+                        </li>
+                        <li style="display: flex; align-items: center; gap: var(--space-2); font-size: 0.9375rem; color: #E2E8F0;">
+                            <svg style="width: 18px; height: 18px; color: var(--accent-cyan);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Integrated vulnerability engineering
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -273,9 +314,9 @@
     </section>
 
     <!-- ========================================================================
-       PROCESS TIMELINE
+       8. PROCESS TIMELINE
        ======================================================================== -->
-    <section class="section" id="home-timeline">
+    <section class="section reveal-on-scroll" id="home-timeline">
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle">How We Work</span>
@@ -317,114 +358,130 @@
     </section>
 
     <!-- ========================================================================
-       FEATURED PROJECTS
+       9. FEATURED PROJECTS
        ======================================================================== -->
-    <section class="section section-bg-light" id="home-featured-projects">
+    <section class="section section-bg-light reveal-on-scroll" id="home-featured-projects">
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle">Proven Case Studies</span>
                 <h2 class="section-title">Digital Transformation In Action</h2>
                 <p class="section-description">Real-world results delivered to leading companies across domains.</p>
             </div>
+            
             <div class="grid grid-3">
                 <div class="portfolio-item">
                     <div class="portfolio-img flex-center">
-                        <span class="portfolio-img-overlay">Cloud Architecture</span>
-                        <i class="fa-solid fa-network-wired" style="font-size: 3.5rem; color: var(--primary-blue);"></i>
+                        <span class="portfolio-img-overlay">Cloud Systems</span>
+                        <svg style="width:64px; height:64px; color:var(--primary-blue);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
                     </div>
                     <div class="portfolio-desc-wrapper">
                         <h3 class="portfolio-item-title">Global Bank Core Migration</h3>
                         <p class="portfolio-item-text">Migrated legacy retail ledger systems to high-availability multi-region AWS cloud without single service interruption.</p>
-                        <a href="portfolio.html" class="card-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="portfolio.html" class="card-link">
+                            View Case Study 
+                            <svg class="card-link-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-img flex-center">
                         <span class="portfolio-img-overlay">Artificial Intelligence</span>
-                        <i class="fa-solid fa-robot" style="font-size: 3.5rem; color: var(--primary-blue);"></i>
+                        <svg style="width:64px; height:64px; color:var(--primary-blue);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 2a10 10 0 0 1 10 10h-10V2z"></path></svg>
                     </div>
                     <div class="portfolio-desc-wrapper">
                         <h3 class="portfolio-item-title">Predictive Medical Diagnostics</h3>
                         <p class="portfolio-item-text">Custom ML pipelines training on secure clinical image archives to discover anomalies with 94% precision index.</p>
-                        <a href="portfolio.html" class="card-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="portfolio.html" class="card-link">
+                            View Case Study 
+                            <svg class="card-link-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-img flex-center">
                         <span class="portfolio-img-overlay">Cybersecurity</span>
-                        <i class="fa-solid fa-user-shield" style="font-size: 3.5rem; color: var(--primary-blue);"></i>
+                        <svg style="width:64px; height:64px; color:var(--primary-blue);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                     </div>
                     <div class="portfolio-desc-wrapper">
                         <h3 class="portfolio-item-title">Logistics Zero Trust System</h3>
                         <p class="portfolio-item-text">Secured 15,000 endpoint delivery networks through modern identity management policies and hardware keys.</p>
-                        <a href="portfolio.html" class="card-link">View Case Study <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="portfolio.html" class="card-link">
+                            View Case Study 
+                            <svg class="card-link-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
                     </div>
                 </div>
             </div>
+            
             <div class="text-center spacer-lg">
-                <a href="portfolio.html" class="btn btn-secondary">Explore All Case Studies <i class="fa-solid fa-folder-open btn-icon"></i></a>
+                <a href="portfolio.html" class="btn btn-secondary">
+                    View All Case Studies
+                    <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- ========================================================================
-       CLIENT TESTIMONIALS
+       10. CLIENT TESTIMONIALS SLIDER
        ======================================================================== -->
-    <section class="section" id="home-testimonials">
+    <section class="section reveal-on-scroll" id="home-testimonials">
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle">Client Endorsements</span>
                 <h2 class="section-title">Partner Perspectives</h2>
                 <p class="section-description">Hear directly from leaders who rely on Aetheris for mission-critical systems.</p>
             </div>
-            <div class="grid grid-3">
-                <div class="card">
-                    <div style="font-size: 1.5rem; color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
-                        <i class="fa-solid fa-quote-left"></i>
-                    </div>
-                    <p class="card-text" style="font-style: italic;">"Aetheris did not just write code; they sat with our architects to redefine how our service discovery logic operates. The results exceeded targets."</p>
-                    <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
-                        <div class="flex-center" style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-blue); color: var(--white); font-weight: 700; font-size: 0.875rem;">MS</div>
-                        <div>
-                            <h4 style="font-size: 0.9375rem;">Marcus Vance</h4>
-                            <p class="text-muted" style="font-size: 0.75rem;">VP Architecture, FinPay Corp</p>
+            
+            <div class="testimonials-slider">
+                <div class="testimonials-track">
+                    
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide active">
+                        <div class="card hover-glow text-center" style="max-width: 700px; margin: 0 auto;">
+                            <svg style="width: 48px; height: 48px; color: var(--primary-blue); opacity: 0.3; margin: 0 auto var(--space-2) auto;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3-3 7-3 10 0M14 21c2-2 5-2 7 0M12 3v10M12 13h10M12 13H2"></path></svg>
+                            <p class="card-text" style="font-style: italic; font-size: 1.25rem; line-height: 1.6; color: var(--primary-deep);">"Aetheris did not just write code; they sat with our architects to redefine how our service discovery logic operates. The results exceeded targets."</p>
+                            <div style="margin-top: var(--space-3);">
+                                <h4 style="font-size: 1rem;">Marcus Vance</h4>
+                                <p class="text-muted" style="font-size: 0.8125rem;">VP Architecture, FinPay Corp</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div style="font-size: 1.5rem; color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
-                        <i class="fa-solid fa-quote-left"></i>
-                    </div>
-                    <p class="card-text" style="font-style: italic;">"The cybersecurity assessment was exceptionally detailed. They uncovered logic vectors that three previous compliance audits had completely missed."</p>
-                    <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
-                        <div class="flex-center" style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-blue); color: var(--white); font-weight: 700; font-size: 0.875rem;">EL</div>
-                        <div>
-                            <h4 style="font-size: 0.9375rem;">Evelyn Lin</h4>
-                            <p class="text-muted" style="font-size: 0.75rem;">Chief Security Officer, BioHealth Group</p>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="card hover-glow text-center" style="max-width: 700px; margin: 0 auto;">
+                            <svg style="width: 48px; height: 48px; color: var(--primary-blue); opacity: 0.3; margin: 0 auto var(--space-2) auto;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3-3 7-3 10 0M14 21c2-2 5-2 7 0M12 3v10M12 13h10M12 13H2"></path></svg>
+                            <p class="card-text" style="font-style: italic; font-size: 1.25rem; line-height: 1.6; color: var(--primary-deep);">"The cybersecurity assessment was exceptionally detailed. They uncovered logic vectors that three previous compliance audits had completely missed."</p>
+                            <div style="margin-top: var(--space-3);">
+                                <h4 style="font-size: 1rem;">Evelyn Lin</h4>
+                                <p class="text-muted" style="font-size: 0.8125rem;">Chief Security Officer, BioHealth Group</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div style="font-size: 1.5rem; color: var(--primary-blue); margin-bottom: var(--spacing-sm);">
-                        <i class="fa-solid fa-quote-left"></i>
-                    </div>
-                    <p class="card-text" style="font-style: italic;">"Their SRE team manages our container clusters with absolute precision. Our service availability has remained at a flawless five-nines."</p>
-                    <div style="display: flex; align-items: center; gap: var(--spacing-sm); margin-top: var(--spacing-md);">
-                        <div class="flex-center" style="width: 40px; height: 40px; border-radius: 50%; background-color: var(--primary-blue); color: var(--white); font-weight: 700; font-size: 0.875rem;">DK</div>
-                        <div>
-                            <h4 style="font-size: 0.9375rem;">David Kross</h4>
-                            <p class="text-muted" style="font-size: 0.75rem;">Director SRE, Logistics Prime</p>
+
+                    <!-- Slide 3 -->
+                    <div class="testimonial-slide">
+                        <div class="card hover-glow text-center" style="max-width: 700px; margin: 0 auto;">
+                            <svg style="width: 48px; height: 48px; color: var(--primary-blue); opacity: 0.3; margin: 0 auto var(--space-2) auto;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3-3 7-3 10 0M14 21c2-2 5-2 7 0M12 3v10M12 13h10M12 13H2"></path></svg>
+                            <p class="card-text" style="font-style: italic; font-size: 1.25rem; line-height: 1.6; color: var(--primary-deep);">"Their SRE team manages our container clusters with absolute precision. Our service availability has remained at a flawless five-nines."</p>
+                            <div style="margin-top: var(--space-3);">
+                                <h4 style="font-size: 1rem;">David Kross</h4>
+                                <p class="text-muted" style="font-size: 0.8125rem;">Director SRE, Logistics Prime</p>
+                            </div>
                         </div>
                     </div>
+
                 </div>
+                <div class="testimonials-dots"></div>
             </div>
         </div>
     </section>
 
     <!-- ========================================================================
-       TECHNOLOGIES GRID
+       11. TECHNOLOGIES GRID
        ======================================================================== -->
-    <section class="section section-bg-light" id="home-technologies">
+    <section class="section section-bg-light reveal-on-scroll" id="home-technologies">
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle">Our Ecosystem</span>
@@ -433,33 +490,38 @@
             </div>
             
             <div class="grid grid-4 text-center">
-                <div style="background-color: var(--white); padding: var(--spacing-md); border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                    <i class="fa-brands fa-aws" style="font-size: 3rem; color: var(--primary-deep); margin-bottom: var(--spacing-xs);"></i>
+                <div class="card hover-glow" style="padding: var(--space-3);">
+                    <!-- Custom SVG Tech Symbol instead of Font Awesome -->
+                    <svg style="width:48px; height:48px; color:var(--primary-blue); margin: 0 auto var(--space-1) auto;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-4V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-4z"></path></svg>
                     <h4>AWS</h4>
                 </div>
-                <div style="background-color: var(--white); padding: var(--spacing-md); border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                    <i class="fa-brands fa-microsoft" style="font-size: 3rem; color: var(--primary-deep); margin-bottom: var(--spacing-xs);"></i>
+                <div class="card hover-glow" style="padding: var(--space-3);">
+                    <svg style="width:48px; height:48px; color:var(--primary-blue); margin: 0 auto var(--space-1) auto;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line></svg>
                     <h4>Microsoft Azure</h4>
                 </div>
-                <div style="background-color: var(--white); padding: var(--spacing-md); border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                    <i class="fa-brands fa-google" style="font-size: 3rem; color: var(--primary-deep); margin-bottom: var(--spacing-xs);"></i>
+                <div class="card hover-glow" style="padding: var(--space-3);">
+                    <svg style="width:48px; height:48px; color:var(--primary-blue); margin: 0 auto var(--space-1) auto;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><path d="M2 12h20"></path></svg>
                     <h4>Google Cloud</h4>
                 </div>
-                <div style="background-color: var(--white); padding: var(--spacing-md); border-radius: var(--border-radius-md); box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
-                    <i class="fa-brands fa-docker" style="font-size: 3rem; color: var(--primary-deep); margin-bottom: var(--spacing-xs);"></i>
+                <div class="card hover-glow" style="padding: var(--space-3);">
+                    <svg style="width:48px; height:48px; color:var(--primary-blue); margin: 0 auto var(--space-1) auto;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
                     <h4>Docker & K8s</h4>
                 </div>
             </div>
+            
             <div class="text-center spacer-lg">
-                <a href="technologies.html" class="btn btn-secondary">Explore Technology Stack <i class="fa-solid fa-code btn-icon"></i></a>
+                <a href="technologies.html" class="btn btn-secondary">
+                    Explore Technology Stacks
+                    <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- ========================================================================
-       FAQ ACCORDION
+       12. FAQ ACCORDION WITH JS SMOOTH TRANSITION
        ======================================================================== -->
-    <section class="section" id="home-faq">
+    <section class="section reveal-on-scroll" id="home-faq">
         <div class="container">
             <div class="section-header">
                 <span class="section-subtitle">FAQ</span>
@@ -469,19 +531,28 @@
             
             <div class="faq-accordion">
                 <details class="faq-item">
-                    <summary>What SLA metrics govern your SRE operations? <i class="fa-solid fa-chevron-down"></i></summary>
+                    <summary>
+                        What SLA metrics govern your SRE operations? 
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
                     <div class="faq-content">
                         <p>Our Tier 1 managed systems are governed by a 99.99% (four-nines) availability agreement. High-priority (P1) incidents receive a 15-minute response SLA, monitored continuously by our distributed operations centers.</p>
                     </div>
                 </details>
                 <details class="faq-item">
-                    <summary>Do you support hybrid-cloud deployment topologies? <i class="fa-solid fa-chevron-down"></i></summary>
+                    <summary>
+                        Do you support hybrid-cloud deployment topologies? 
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
                     <div class="faq-content">
                         <p>Yes. We regularly design and manage hybrid systems that interface legacy private infrastructure with hyperscalers. We use container isolation (Kubernetes) and secure endpoints to keep traffic encrypted transit-wide.</p>
                     </div>
                 </details>
                 <details class="faq-item">
-                    <summary>How do you approach legacy system modernizations? <i class="fa-solid fa-chevron-down"></i></summary>
+                    <summary>
+                        How do you approach legacy system modernizations? 
+                        <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </summary>
                     <div class="faq-content">
                         <p>We deploy the Strangler Fig pattern to extract services incrementally. This mitigates operational risks, allowing components to modernize while maintaining absolute operational parity between the old and new clusters.</p>
                     </div>
@@ -491,36 +562,55 @@
     </section>
 
     <!-- ========================================================================
-       CONTACT CALL-TO-ACTION
+       13. CONTACT CALL-TO-ACTION
        ======================================================================== -->
-    <section class="section section-bg-dark" id="home-cta">
+    <section class="section section-bg-dark reveal-on-scroll" id="home-cta">
         <div class="container text-center" style="max-width: 800px;">
-            <span class="section-subtitle" style="color: var(--accent-cyan);">Ready to Transform?</span>
-            <h2 class="section-title" style="color: var(--white); font-size: 2.75rem;">Let's Architect Your Next Breakthrough</h2>
-            <p class="text-muted spacer-md" style="color: #DFE1E6; font-size: 1.125rem;">Discuss your objectives with our senior consulting partners. We'll map out a high-level timeline and execution roadmap.</p>
+            <span class="section-subtitle" style="color: var(--accent-cyan);">Ready to Partner?</span>
+            <h2 class="section-title" style="color: var(--white); font-size: 2.75rem;">Let's Architect Your Next Solution</h2>
+            <p class="text-muted spacer-md" style="color: #94A3B8; font-size: 1.125rem;">Discuss your objectives with our senior consulting partners. We'll map out a high-level execution roadmap.</p>
             <div class="spacer-md"></div>
-            <div class="flex-center" style="gap: var(--spacing-sm); flex-wrap: wrap;">
-                <a href="contact.html" class="btn btn-light">Schedule Discovery Call <i class="fa-solid fa-calendar-check btn-icon"></i></a>
-                <a href="contact.html" class="btn btn-white-outline">Write to Our Architects</a>
+            <div class="flex-center" style="gap: var(--space-2); flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-light">
+                    Schedule Consultation
+                    <svg class="btn-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                </a>
+                <a href="contact.html" class="btn btn-outline-white">Write to Our Architects</a>
             </div>
         </div>
     </section>
 
     <!-- ========================================================================
-       FOOTER
+       14. PROFESSIONAL MULTI-COLUMN FOOTER
        ======================================================================== -->
     <footer class="site-footer">
         <div class="container footer-grid">
             <div class="footer-about">
                 <a href="index.html" class="logo" id="footer-logo">
-                    <div class="logo-icon"></div>
+                    <svg class="logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#logo-grad-f)" />
+                        <circle cx="16" cy="16" r="6" fill="white" />
+                        <circle cx="16" cy="16" r="3" fill="#0052CC" />
+                        <defs>
+                            <linearGradient id="logo-grad-f" x1="2" y1="2" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+                                <stop offset="0%" stop-color="#0052CC" />
+                                <stop offset="100%" stop-color="#00B4D8" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
                     Aetheris<span>.</span>
                 </a>
                 <p>Enterprise-grade digital transformation, high-fidelity engineering, and strategic tech consulting globally.</p>
                 <div class="social-links">
-                    <a href="#" class="social-link flex-center" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link flex-center" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="social-link flex-center" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="social-link flex-center" aria-label="LinkedIn">
+                        <svg class="social-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="#" class="social-link flex-center" aria-label="Twitter/X">
+                        <svg class="social-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                    </a>
+                    <a href="#" class="social-link flex-center" aria-label="GitHub">
+                        <svg class="social-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
                 </div>
             </div>
             
@@ -559,13 +649,15 @@
                 <p>Subscribe to our bi-weekly architecture insights and technical reports.</p>
                 <form class="newsletter-form" action="#" method="POST">
                     <input type="email" placeholder="Corporate email" aria-label="Corporate email" required>
-                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                    <button type="submit" aria-label="Subscribe">
+                        <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
                 </form>
             </div>
         </div>
         
         <div class="container footer-bottom">
-            <p>&copy; 2026 Aetheris Technologies. All rights reserved. Built using clean HTML5 & CSS3.</p>
+            <p>&copy; 2026 Aetheris Technologies. All rights reserved. Built using HTML5, CSS3, & JavaScript.</p>
             <div class="footer-bottom-links">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
@@ -574,5 +666,7 @@
         </div>
     </footer>
 
+    <!-- Global Javascript library -->
+    <script src="js/main.js" defer></script>
 </body>
 </html>

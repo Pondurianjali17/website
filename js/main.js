@@ -31,6 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 8. Mobile Menu Scoll Lock
     initMobileMenuLock();
+
+    // Redesign Additions
+    initStickyNavShrink();
+    initAOSAnimation();
+    initGSAPAnimations();
 });
 
 /**
@@ -454,4 +459,74 @@ function initMobileMenuLock() {
             document.body.style.overflow = '';
         });
     });
+}
+
+/**
+ * Redesign: Sticky Nav Shrink on Scroll
+ */
+function initStickyNavShrink() {
+    const header = document.querySelector('.site-header');
+    if (!header) return;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('nav-shrink');
+        } else {
+            header.classList.remove('nav-shrink');
+        }
+    });
+}
+
+/**
+ * Redesign: Initialize AOS Animation
+ */
+function initAOSAnimation() {
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-quad',
+            once: true,
+            offset: 80
+        });
+    }
+}
+
+/**
+ * Redesign: GSAP Page Load & Interactive Animations
+ */
+function initGSAPAnimations() {
+    if (typeof gsap !== 'undefined') {
+        // Hero Content Fade-in
+        gsap.from('.hero-content > *', {
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            stagger: 0.15,
+            ease: 'power3.out'
+        });
+
+        // Hero Illustration floating animation
+        gsap.to('.hero-illustration', {
+            y: -15,
+            duration: 4,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut'
+        });
+
+        // Mouse Parallax on Hero Graphics
+        const heroSection = document.getElementById('home-hero');
+        if (heroSection) {
+            heroSection.addEventListener('mousemove', (e) => {
+                const { clientX, clientY } = e;
+                const { width, height } = heroSection.getBoundingClientRect();
+                const xPos = (clientX / width - 0.5) * 20;
+                const yPos = (clientY / height - 0.5) * 20;
+
+                gsap.to('.illustration-sphere', { x: xPos, y: yPos, duration: 1, ease: 'power2.out' });
+                gsap.to('.illustration-ring-1', { x: -xPos * 0.5, y: -yPos * 0.5, duration: 1.5, ease: 'power2.out' });
+                gsap.to('.illustration-ring-2', { x: xPos * 0.8, y: yPos * 0.8, duration: 1.8, ease: 'power2.out' });
+            });
+        }
+    }
 }
